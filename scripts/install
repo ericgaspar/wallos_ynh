@@ -32,10 +32,10 @@ ynh_script_progression "Adding $app's configuration files..."
 
 mv "$install_dir/db/wallos.empty.db" "$install_dir/db/wallos.db"
 
-ynh_config_add --template="some_config_file" --destination="$install_dir/some_config_file"
+#ynh_config_add --template="some_config_file" --destination="$install_dir/some_config_file"
 
-chmod 400 "$install_dir/some_config_file"
-chown "$app:$app" "$install_dir/some_config_file"
+#chmod 400 "$install_dir/some_config_file"
+#chown "$app:$app" "$install_dir/some_config_file"
 
 #=================================================
 # SYSTEM CONFIGURATION
