@@ -13,10 +13,7 @@ maintainers = ["eric_G"]
 
 [upstream]
 license = "GPL-3.0 license"
-website = "https://example.com"
 demo = "https://demo.wallosapp.com"
-admindoc = "https://yunohost.org/packaging_apps"
-userdoc = "https://yunohost.org/apps"
 code = "https://github.com/ellite/Wallos"
 
 
@@ -45,18 +42,14 @@ ram.runtime = "50M"
     url = "https://github.com/ellite/Wallos/archive/refs/tags/v2.33.1.tar.gz"
     sha256 = "4adbc0897ea55b74038e4aa6d01288480a5b676c2adb4ef7f2615da7b7f1b3f1"
 
-    # autoupdate.strategy = "latest_github_tag"
+    autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
     [resources.install_dir]
 
-    [resources.data_dir]
-
     [resources.permissions]
     main.url = "/"
-
-    [resources.ports]
 
     [resources.apt]
     packages = "php8.2-curl, php8.2-gd, php8.2-imagick, php8.2-intl, php8.2-sqlite3, php8.2-zip"
