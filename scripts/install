@@ -37,6 +37,14 @@ pushd $install_dir
 popd
 
 #=================================================
+# ADD A CRON JOB
+#=================================================
+
+ynh_config_add --template=".cron" --destination="/etc/cron.d/$app"
+chown root: "/etc/cron.d/$app"
+chmod 644 "/etc/cron.d/$app"
+
+#=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
