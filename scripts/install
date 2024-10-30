@@ -37,6 +37,10 @@ mv "$install_dir/db/wallos.empty.db" "$install_dir/db/wallos.db"
 #chmod 400 "$install_dir/some_config_file"
 #chown "$app:$app" "$install_dir/some_config_file"
 
+pushd $install_dir
+  ynh_hide_warnings ynh_exec_as_app php${php_version} /endpoints/db/migrate.php
+popd
+
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
