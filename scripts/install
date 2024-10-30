@@ -32,9 +32,7 @@ ynh_script_progression "Adding db configuration files..."
 
 mv "$install_dir/db/wallos.empty.db" "$install_dir/db/wallos.db"
 
-pushd $install_dir
-  ynh_hide_warnings ynh_exec_as_app php${php_version} /endpoints/db/migrate.php
-popd
+ynh_hide_warnings ynh_exec_as_app php${php_version} $install_dir/endpoints/db/migrate.php
 
 #=================================================
 # ADD A CRON JOB
